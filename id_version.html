@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faiz Falah Fauzian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <script>
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+           if (entry.isIntersecting) {
+               entry.target.classList.add('show');
+               observer.unobserve(entry.target); 
+           }
+       });
+   }, {
+       threshold: 0.5
+   });
+       document.querySelectorAll('.slide-in-left').forEach(element => {
+           observer.observe(element);
+       });
+       document.querySelectorAll('.slide-in-right').forEach(element => {
+           observer.observe(element);
+       });
+       document.querySelectorAll('.slide-in-top').forEach(element => {
+           observer.observe(element);
+       });
+       document.querySelectorAll('.slide-in-bottom').forEach(element => {
+           observer.observe(element);
+       });
+</script>
+</head>
+<body>
+   <a id="awal" href="/id_version.html"><img src="./Assets/border.png" alt="border" class="border slide-in-left"></a>
+   <ul class="nav logo-container">
+    <li class="nav-item">
+        <a class="nav-link" href="./index.html">
+            <img src="./Assets/EN.jpg" alt="American flag" class="American-flag slide-in-top">
+        </a>
+    </li>
+   </ul>
+
+   <ul class="nav justify-content-center nav-pills pt-0">
+    <li class="nav-item">
+        <a class="nav-link " aria-current="page" href="./Public/resume.html " target="_blank"><h6 class="nav-title  slide-in-top">Resume</h6></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#projects"><h6 class="nav-title slide-in-top">Proyek</h6></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="#contact"><h6 class="nav-title  slide-in-top">Kontak</h6></a>
+    </li>
+   </ul>
+   
+    <div class="gridcont">
+        <div class="intro slide-in-left"><p>Anak SMA biasa yang punya minat tinggi dengan <i>coding</i>, <i>programming</i>, dan desain, khususnya <i>web-development</i> dan JavaScript. Punya mimpi besar untuk bisa belajar di Jepang.</p></div>
+        <div class="avatar slide-in-top"><img src="./Assets/Gua.JPG" alt="my-photo"></div>
+        <div id="projects" class="title">
+            <h1 class="slide-in-left">Projects</h1>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-row">
+            <div class="screenshot slide-in-left">
+                <img src="./Assets/screenshot.png" alt="screenshot">
+            </div>
+            <div class="deskription slide-in-right">
+                <p>Salah satu proyek paling pertama dengan judul "Fatih's Birthday Invitation", hasil dari ngikutin Dr. Angela Yu di Udemy dengan sedikit polesan tambahan CSS. Buat proyek yang lain, <a href="./Public/projects.html" class="klik" target="_blank">Klik disini</a></p>
+            </div>
+        </div>
+    </div>
+        <div class="about slide-in-bottom">
+            <h2>Kenapa Harus <em>Programming?</em></h2>
+            <p>Yah sebagai orang yang kerjaannya di depan komputer doang, aku pengen banget buat bisa tahu seluk beluk tentang komputer yang aku pake ini. Di satu sisi aku juga orangnya filosofis banget, apa-apa ditanyain kenapa? Kok bisa gitu? Caranya gimana?  Jadi ya of course aku pengen banget di masa depan bisa manipulasi computer yang biasanya tak pake lebih dari 8 jam per hari ini ! Aku juga pengen banget bisa programming, jadi bisa buat tools yang berguna bagi sekitarku. Di sisi lain sih, ini Cuma Journey-ku aja buat nyari tahu semua yang ada (buat muasin Hasrat filsafat-ku). Dan yang paling penting, I love it! Bisa programming atau coding itu keren banget bro ! Kita punya standar keren yang berbeda dan menurutku ini yang paling keren.</p>
+        </div>
+    </div>
+    <br> <br> <br> <br>
+    <footer>
+        <p id="Contacts">Contacts:</p>
+        <ul class="nav justify-content-center" id="contact">
+            <li class="nav-item">
+                <a class="nav-link" href="https://wa.me/+6281226777739" target="_blank"><img src="./Assets/WhatsApp.svg.webp" alt="WhatsApp"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/faizfalahfauzian/" target="_blank"><img src="./Assets/Instagram.webp" alt="Instagram"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://t.me/Soesantohanyakrakusuma" target="_blank"><img src="./Assets/Telegram.png" alt="Telegram"></a>
+            </li>
+        </ul>
+        <p>If you're looking for someone to study with, brainstorm solutions, discuss design, and more, I'm open to new connections and look forward to hearing from you!</p>
+        <p>© 2025 Faiz Falah Fauzian</p>
+    </footer>
+</body>
+</html>

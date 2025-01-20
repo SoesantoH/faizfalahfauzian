@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <script>
+     const observer = new IntersectionObserver((entries, observer) => {
+     entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); 
+        }
+    });
+}, {
+    threshold: 0.5
+});
+    document.querySelectorAll('.slide-in-left').forEach(element => {
+        observer.observe(element);
+    });
+    document.querySelectorAll('.slide-in-right').forEach(element => {
+        observer.observe(element);
+    });
+    document.querySelectorAll('.slide-in-top').forEach(element => {
+        observer.observe(element);
+    });
+    document.querySelectorAll('.slide-in-bottom').forEach(element => {
+        observer.observe(element);
+    });
+    </script>
+</head>
+<body>
+   <a id="awal" href="./index.html"><img src="Assets/border.png" alt="border" class="border slide-in-left"></a>
+   <ul class="nav logo-container">
+    <li class="nav-item">
+        <a class="nav-link" href="./id_version.html">
+            <img src="./Assets/id.svg.png" alt="Indonesian flag" class="logo-indonesia slide-in-top">
+        </a>
+    </li>
+   </ul>
+
+   <ul class="nav justify-content-center nav-pills pt-0">
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="./Public/resume.html" target="_blank"><h6 class="nav-title  slide-in-top">My Resume</h6></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#projects"><h6 class="nav-title  slide-in-top">Projects</h6></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#contact"><h6 class="nav-title  slide-in-top">Contact</h6></a>
+    </li>
+   </ul>
+   
+    <div class="gridcont">
+        <div class="intro slide-in-left"><p>A normal highschool student who is very interested in coding, programming, and design, especially Web-developing and JavaScript. Got a dream to study in Japan.</p></div>
+        <div class="avatar slide-in-top"><img src="./Assets/Gua.JPG" alt="my-photo"></div>
+        <div id="projects" class="title">
+            <h1 class="slide-in-left">Projects</h1>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-row">
+            <div class="screenshot slide-in-left">
+                <img src="./Assets/screenshot.png" alt="screenshot">
+            </div>
+            <div class="deskription slide-in-right">
+                <p>One of my very first website project called "Fatih's Birthday Invitation". I followed instructions from Dr. Angela Yu At Udemy with a bit of CSS. For more Projects, <a href="./Public/projects.html" class="klik" target="_blank">click here.</a></p>
+            </div>
+        </div>
+    </div>
+        <div class="about slide-in-bottom">
+            <h2>Why Programming?</h2>
+            <p>Well, as someone who works in front of a computer, I really want to know the ins and outs of this computer that I use. On the one hand, I'm also a very philosophical person, everything is asked why? How come? So yes of course I really want to be able to manipulate this computer that I usually don't use more than 8 hours per day in the future! I also really want to be able to program, so I can create tools that are useful for my surroundings. On the other hand, this is just my journey to find out everything there is (to fulfill my philosophical desires). And most importantly, I love it! Being able to program or code is really cool bro! We have different standards of cool and I think this is the coolest.</p>
+        </div>
+    </div>
+    <br> <br> <br> <br> 
+    <footer>
+        <p id="Contacts">Contacts:</p>
+        <ul class="nav justify-content-center" id="contact">
+            <li class="nav-item">
+                <a class="nav-link" href="https://wa.me/+6281226777739" target="_blank"><img src="./Assets/WhatsApp.svg.webp" alt="WhatsApp"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/faizfalahfauzian/" target="_blank"><img src="./Assets/Instagram.webp" alt="Instagram"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://t.me/Soesantohanyakrakusuma" target="_blank"><img src="./Assets/Telegram.png" alt="Telegram"></a>
+            </li>
+        </ul>
+        <p>If you're looking for someone to study with, brainstorm solutions, discuss design, and more, I'm open to new connections and look forward to hearing from you!</p>
+        <p>© 2025 Faiz Falah Fauzian</p>
+    </footer>
+</body>
+</html>

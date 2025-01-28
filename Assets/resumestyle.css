@@ -1,0 +1,144 @@
+html {
+    background-color: #ece7e3;
+    scroll-behavior: smooth;
+}
+
+.project-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem 0;
+    list-style: none;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid #213555;
+}
+
+.h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #213555;
+}
+
+.name-list {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #213555;
+    list-style: none;
+}
+
+hr {
+    color: #213555;
+    margin: 7px 0;
+}
+
+.h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #213555;
+}
+
+.summary {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: medium;
+    color: #090d13;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.education-list, .organization-list {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: medium;
+    color: #090d13;
+    margin-bottom: 1rem;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.slide-in-top {
+    animation: slideInTop 1s ease-out forwards;
+}
+
+@keyframes slideInTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .name-list, .summary, .education-list, .organization-list {
+        font-size: 0.9rem;
+    }
+
+    .project-content, .education, .organization {
+        padding: 0 1rem;
+    }
+
+    .slide-in-right, .slide-in-top {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    hr {
+        margin: 0.5rem 0;
+    }
+
+    ul {
+        padding-left: 1rem;
+    }
+
+    .education-list, .organization-list {
+        margin-bottom: 0.5rem;
+    }
+}

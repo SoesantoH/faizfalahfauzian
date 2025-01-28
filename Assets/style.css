@@ -310,7 +310,7 @@ footer {
         margin: 4rem auto 2rem auto;
     }
 
-    .intro, .avatar, .title, .screenshot, .description, .about {
+    .intro, .avatar, .title, .screenshot, .deskription, .about {
         margin-left: 0;
         text-align: center;
     }
@@ -334,7 +334,7 @@ footer {
         margin: 0 2rem;
     }
 
-    .desription {
+    .deskription {
         width: 80%;
         margin: 0 auto;
     }
@@ -346,19 +346,55 @@ footer {
         border-radius: 4rem;
     }
 
-    .contact {
-        padding: 3rem;
-        width: 100%;
-    }
-
     footer {
         text-align: center;
         padding: 1rem;
     }
+
+    .nav-pills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .project-row {
+        flex-direction: column;
+    }
+
+    .screenshot img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-in-left, .slide-in-right, .slide-in-top, .slide-in-bottom {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @media (max-width: 480px) {
-    .border { 
+    .border {
         display: none;
+    }
+
+    .intro > p {
+        font-size: medium;
+    }
+
+    .nav-title {
+        font-size: 1rem;
+    }
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul li {
+        margin: 0.5rem 0;
     }
 }
